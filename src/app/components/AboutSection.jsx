@@ -2,6 +2,8 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
+import { space_mono } from "../layout";
+import { space } from "postcss/lib/list";
 
 const TAB_DATA = [
   {
@@ -9,12 +11,11 @@ const TAB_DATA = [
     id: "skills",
     content: (
       <ul className="list-disc pl-2">
+        <li>React</li>
+        <li>Next.js</li>
         <li>Node.js</li>
         <li>Express</li>
-        <li>PostgreSQL</li>
-        <li>Sequelize</li>
-        <li>JavaScript</li>
-        <li>React</li>
+        <li>Python</li>
       </ul>
     ),
   },
@@ -23,18 +24,20 @@ const TAB_DATA = [
     id: "education",
     content: (
       <ul className="list-disc pl-2">
-        <li>Fullstack Academy of Code</li>
-        <li>University of California, Santa Cruz</li>
+        {/* <li>Fullstack Academy of Code</li> */}
+        <li>Virginia Tech Computer Science MEng</li>
+        <li>National Chiao Tung University CS BS</li>
       </ul>
     ),
   },
   {
-    title: "Certifications",
-    id: "certifications",
+    title: "Experience",
+    id: "experience",
     content: (
       <ul className="list-disc pl-2">
-        <li>AWS Cloud Practitioner</li>
-        <li>Google Professional Cloud Developer</li>
+        <li>Software Developer Intern - Radical AI</li>
+        <li>R&D Intern - SHOPLINE</li>
+        <li>Undergraduate Researcher - NYCU</li>
       </ul>
     ),
   },
@@ -51,20 +54,19 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image src="/images/about-image.png" width={500} height={500} />
+    <section className="text-white h-[calc(100vh-1rem)] pt-[5%]" id="about">
+      <div className="md:grid md:grid-cols-2 gap-8 flex items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+        <Image className="self-start py-12" src="/images/about-image.jpg" width={500} height={500} alt="About Me" />
         <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
-          <h2 className="text-4xl font-bold text-white mb-4">About Me</h2>
+          <h2 className={`text-4xl font-bold text-white mb-4 ${space_mono.className}`}>About Me</h2>
           <p className="text-base lg:text-lg">
-            I am a full stack web developer with a passion for creating
-            interactive and responsive web applications. I have experience
-            working with JavaScript, React, Redux, Node.js, Express, PostgreSQL,
-            Sequelize, HTML, CSS, and Git. I am a quick learner and I am always
-            looking to expand my knowledge and skill set. I am a team player and
-            I am excited to work with others to create amazing applications.
+          I am a Computer Science graduate student at Virginia Tech. 
+          My passion lies in developing innovative software solutions, particularly in the realms of web development and machine learning. 
+          With experience in full-stack development, I&apos;ve worked on projects ranging from e-commerce platforms to AI-driven applications.<br></br>
+          My toolkit includes <span className="highlight">Python</span>, <span className="highlight">JavaScript</span>, and <span className="highlight">C++</span>, as well as frameworks such as <span className="highlight">React.js, Node.js</span>, and <span className="highlight">Pytorch</span>. 
+          Always eager to learn and tackle new challenges, I&apos;m excited about opportunities to create impactful applications that push the boundaries of technology.
           </p>
-          <div className="flex flex-row justify-start mt-8">
+          <div className={`flex flex-row justify-start mt-8 ${space_mono.className}`} >
             <TabButton
               selectTab={() => handleTabChange("skills")}
               active={tab === "skills"}
@@ -80,14 +82,14 @@ const AboutSection = () => {
               Education{" "}
             </TabButton>
             <TabButton
-              selectTab={() => handleTabChange("certifications")}
-              active={tab === "certifications"}
+              selectTab={() => handleTabChange("experience")}
+              active={tab === "experience"}
             >
               {" "}
-              Certifications{" "}
+              Experience{" "}
             </TabButton>
           </div>
-          <div className="mt-8">
+          <div className={`mt-4 ${space_mono.className}`}>
             {TAB_DATA.find((t) => t.id === tab).content}
           </div>
         </div>

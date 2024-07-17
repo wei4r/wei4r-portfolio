@@ -1,30 +1,35 @@
-# Portfolio Website
+# Wei4r's Personal Portfolio
 
-This is a portfolio website built with Next.js and Tailwind CSS. It showcases your skills, projects, and achievements in an elegant and responsive design.
+This project is a personal portfolio website built with Next.js, React, and Redux. It showcases my skills, projects, and achievements as a software engineer and computer science student.
 
-## Installation
+Follow the link [wei4r.com](http://wei4r.com) to the page.
 
-1. Clone the repository: `git clone https://github.com/judygab/nextjs-portfolio.git`
-2. Navigate to the project directory: `cd portfolio-website`
-3. Install the dependencies: `npm install`
 
-## Usage
+## Features
 
-1. Start the development server: `npm run dev`
-2. Open your browser and visit `http://localhost:3000` to view the website.
+- Responsive design
+- Dynamic content loading
+- Animated UI elements
+- Project showcase with filtering
+- Achievement section with real-time data fetching
+- Contact form (commented out in current version)
 
-## Dependencies
+## Technologies Used
 
-The following dependencies are required for this project:
+- Next.js
+- React
+- Redux
+- Framer Motion for animations
+- Tailwind CSS for styling
 
-- Next.js: A React framework for server-side rendering and static site generation.
-- Tailwind CSS: A highly customizable CSS framework.
-- React: A JavaScript library for building user interfaces.
-- React Icons: A collection of popular icons for React projects.
-- TypeScript: A typed superset of JavaScript that compiles to plain JavaScript.
-- Resend: Resend is the email API for developers.
+## Project Structure
 
-## License
-
-This project is licensed under the [MIT License](https://opensource.org/licenses/MIT). Feel free to use, modify, and distribute the code as per the terms of the license.
-
+- `page.js`: The main page component
+- `layout.js`: The root layout component
+- `components/`:
+  - `Navbar.jsx`: Navigation bar component
+  - `FirstPage.jsx`: Hero section component
+  - `AboutSection.jsx`: About me section
+  - `ProjectsSection.jsx`: Projects showcase section
+  - `AchievementsSection.jsx`: Achievements display section
+  - `Footer.jsx`: Footer component

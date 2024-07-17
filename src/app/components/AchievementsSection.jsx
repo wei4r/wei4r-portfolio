@@ -1,6 +1,8 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import dynamic from "next/dynamic";
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchContestRating, fetchGithubRepoNum, fetchCommitsThisWeek } from '../../redux/slices/achievementsSlice';
 
 const AnimatedNumbers = dynamic(
   () => {
@@ -9,32 +11,21 @@ const AnimatedNumbers = dynamic(
   { ssr: false }
 );
 
-const achievementsList = [
-  {
-    metric: "Projects",
-    value: "100",
-    postfix: "+",
-  },
-  {
-    prefix: "~",
-    metric: "Users",
-    value: "100,000",
-  },
-  {
-    metric: "Awards",
-    value: "7",
-  },
-  {
-    metric: "Years",
-    value: "5",
-  },
-];
-
 const AchievementsSection = () => {
+  const dispatch = useDispatch();
+  const achievements = useSelector((state) => state.achievements.achievements);
+
+  useEffect(() => {
+    dispatch(fetchContestRating());
+    dispatch(fetchGithubRepoNum());
+    dispatch(fetchCommitsThisWeek());
+  }, [dispatch]);
+
+
   return (
-    <div className="py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
+    <div className="py-6 px-4 xl:gap-16 sm:py-12 xl:px-16">
       <div className="sm:border-[#33353F] sm:border rounded-md py-8 px-16 flex flex-col sm:flex-row items-center justify-between">
-        {achievementsList.map((achievement, index) => {
+        {achievements.map((achievement, index) => {
           return (
             <div
               key={index}
@@ -51,7 +42,7 @@ const AchievementsSection = () => {
                     return {
                       mass: 1,
                       friction: 100,
-                      tensions: 140 * (index + 1),
+                      // tensions: 140 * (index + 1),
                     };
                   }}
                 />
