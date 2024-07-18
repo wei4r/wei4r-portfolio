@@ -54,10 +54,12 @@ const AboutSection = () => {
   };
 
   return (
-    <section className="text-white h-[calc(100vh-1rem)] pt-[5%]" id="about">
-      <div className="md:grid md:grid-cols-2 gap-8 flex items-center py-8 px-4 xl:gap-16 sm:py-16 xl:px-16">
-        <Image className="self-start py-12" src="/images/about-image.jpg" width={500} height={500} alt="About Me" />
-        <div className="mt-4 md:mt-0 text-left flex flex-col h-full">
+    <section className="text-white h-full pt-[5%]" id="about">
+      <div className="md:grid md:grid-cols-2 gap-8 items-center py-8 px-8 sm:px-4 xl:gap-16 sm:py-16 xl:px-16">
+        <div className="flex flex-col h-full">
+          <Image className="self-center sm:self-start pb-4 sm:py-12 w-[300px] sm:w-full" src="/images/about-image.jpg" width={500} height={500} alt="About Me" />
+        </div>
+        <div className="sm:mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className={`text-4xl font-bold text-white mb-4 ${space_mono.className}`}>About Me</h2>
           <p className="text-base lg:text-lg">
           I am a Computer Science graduate student at Virginia Tech. 

@@ -65,11 +65,11 @@ const HeroSection = () => {
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
             I am now a Master&apos;s student @ Virginia Tech studying Computer Science and I am proficient in various programming languages and technologies.
           </p>
-          <div className="flex justify-start mb-3 flex-wrap">
+          <div className="flex justify-center sm:justify-start mb-3 flex-wrap">
             <a
               href="ShihHungWei.pdf"
               download="ShihHungWei.pdf"
-              className="mt-2 inline-flex px-[2px] py-[2px] w-full sm:w-fit rounded-full font-bold mr-4 bg-gradient-to-br from-primary-500 to-yellow-500 hover:bg-slate-900 text-white"
+              className="mt-2 inline-flex px-[2px] py-[2px] sm:w-fit rounded-full font-bold mr-4 bg-gradient-to-br from-primary-500 to-yellow-500 hover:bg-slate-900 text-white"
             >
               <span className="block bg-[#0f172a] hover:bg-gradient-to-br hover:from-primary-500 hover:to-yellow-500 rounded-full px-7 py-2">
                 Resume
