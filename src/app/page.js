@@ -13,7 +13,7 @@ export default function Home({ Component, pageProps }) {
     <Provider store={store}>
       <main className="flex min-h-screen flex-col bg-[#121212] w-full max-w-full">
         <Navbar />
-        <div className="container pt-12 sm:pt-24 sm:px-8 xl:px-12 pb-4 w-full max-w-full">
+        <div className="container pt-16 sm:pt-24 sm:px-8 xl:px-12 pb-4 w-full max-w-full">
           <FirstPage/>
           <AboutSection />
           <ProjectsSection />

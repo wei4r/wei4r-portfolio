@@ -23,7 +23,7 @@ const AchievementsSection = () => {
 
 
   return (
-    <div className="py-2 px-4 xl:gap-16 sm:py-12 xl:px-16">
+    <div className="py-2 px-4 xl:gap-16 sm:py-12 xl:px-16 mb-16">
       <div className="sm:border-[#33353F] sm:border rounded-md sm:py-8 sm:px-16 flex sm:flex-row items-center justify-between">
         {achievements.map((achievement, index) => {
           return (

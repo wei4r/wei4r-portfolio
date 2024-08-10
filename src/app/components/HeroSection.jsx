@@ -17,7 +17,7 @@ const HeroSection = () => {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
   return (
-    <section className="lg:py-12 px-4 xl:px-12 xl:mb-16">
+    <section className="lg:py-8 px-4 xl:px-8 xl:mb-16">
       <div className="flex flex-col lg:flex-row gap-8 xl:gap-16">
         <motion.div
           initial={{ opacity: 0, scale: 0.5 }}
@@ -42,11 +42,11 @@ const HeroSection = () => {
           transition={{ duration: 0.5 }}
           className="col-span-8 place-self-center text-center sm:text-left justify-self-start flex-col"
         >
-          <h1 className="text-white mb-4 text-3xl sm:text-4xl lg:text-6xl lg:leading-normal font-extrabold">
+          <h1 className="text-white mb-4 text-4xl sm:text-5xl lg:text-6xl lg:leading-normal font-extrabold pl-6">
             <span className="text-transparent bg-clip-text lg:text-7xl bg-gradient-to-r from-primary-500 to-yellow-500">
               Hello I&apos;m{" "}&nbsp;
             </span>
-            {windowWidth > 1024 ? <br /> : null}
+            <br/>
             <TypeAnimation
               sequence={[
                 "Hank Wei",
@@ -62,7 +62,7 @@ const HeroSection = () => {
               className={space_mono.className}
             />
           </h1>
-          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl">
+          <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl px-8">
             I am now a Master&apos;s student @ Virginia Tech studying Computer Science and I am proficient in various programming languages and technologies.
           </p>
           <div className="flex justify-center sm:justify-start mb-3 flex-wrap">

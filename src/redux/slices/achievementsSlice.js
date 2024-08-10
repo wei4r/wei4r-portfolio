@@ -2,7 +2,7 @@ import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 
 const initialState = {
   achievements: [
-    { metric: "years Coding Exp.", value: 12 },
+    { metric: "years Coding Exp.", value: 9 },
     { metric: "GitHub repos", value: 0 },
     { metric: "Commits this week", value: 0 },
     { metric: "LeetCode Contest Rating", value: 0 },
