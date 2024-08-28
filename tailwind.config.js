@@ -18,6 +18,7 @@ module.exports = {
       ...colors,
       primary: colors.blue,
       secondary: colors.amber,
+      pageBg: '#050912',
     },
   },
   plugins: [],

@@ -71,7 +71,7 @@ const HeroSection = () => {
               download="ShihHungWei.pdf"
               className="mt-2 inline-flex px-[2px] py-[2px] sm:w-fit rounded-full font-bold mr-4 bg-gradient-to-br from-primary-500 to-yellow-500 hover:bg-slate-900 text-white"
             >
-              <span className="block bg-[#0f172a] hover:bg-gradient-to-br hover:from-primary-500 hover:to-yellow-500 rounded-full px-7 py-2">
+              <span className="block bg-pageBg hover:bg-gradient-to-br hover:from-primary-500 hover:to-yellow-500 rounded-full px-7 py-2">
                 Resume
               </span>
             </a>
