@@ -34,6 +34,7 @@ const TAB_DATA = [
     id: "experience",
     content: (
       <ul className="list-disc pl-2">
+        <li>Software Engineer - TSMC</li>
         <li>Software Developer Intern - Radical AI</li>
         <li>R&D Intern - SHOPLINE</li>
         <li>Undergraduate Researcher - NYCU</li>
