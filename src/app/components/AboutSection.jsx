@@ -34,7 +34,7 @@ const TAB_DATA = [
     id: "experience",
     content: (
       <ul className="list-disc pl-2">
-        <li>Software Engineer - TSMC</li>
+        <li className="text-yellow-400">Software Engineer - TSMC</li>
         <li>Software Developer Intern - Radical AI</li>
         <li>R&D Intern - SHOPLINE</li>
         <li>Undergraduate Researcher - NYCU</li>
@@ -62,7 +62,7 @@ const AboutSection = () => {
         <div className="sm:mt-4 md:mt-0 text-left flex flex-col h-full">
           <h2 className={`text-4xl font-bold text-white mb-4 ${space_mono.className}`}>About Me</h2>
           <p className="text-base lg:text-lg">
-          I am a Computer Science graduate student at Virginia Tech. 
+          I am a new grad Software Engineer just graduated from Virginia Tech. 
           My passion lies in developing innovative software solutions, particularly in the realms of web development and machine learning. 
           With experience in full-stack development, I&apos;ve worked on projects ranging from e-commerce platforms to AI-driven applications.<br></br>
           My toolkit includes <span className="highlight">Python</span>, <span className="highlight">JavaScript</span>, and <span className="highlight">C++</span>, as well as frameworks such as <span className="highlight">React.js, Node.js</span>, and <span className="highlight">Pytorch</span>. 

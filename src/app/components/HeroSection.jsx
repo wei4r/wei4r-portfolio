@@ -63,7 +63,7 @@ const HeroSection = () => {
             />
           </h1>
           <p className="text-[#ADB7BE] text-base sm:text-lg mb-6 lg:text-xl px-8">
-            I am now a Master&apos;s student @ Virginia Tech studying Computer Science and I am proficient in various programming languages and technologies.
+            I am a Software Engineer just graduated from Virginia Tech studying Computer Science and I am proficient in various programming languages and technologies.
           </p>
           <div className="flex justify-center sm:justify-start mb-3 flex-wrap gap-4">
             <div className="flex justify-center sm:justify-start mb-3 flex-wrap gap-4 w-full sm:w-auto">
