@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
-import { space_mono } from "../layout";
+import { space_mono } from "../fonts";
 import ContactLink from "./ContactLink";
 import SocialButton from "./SocialButton";
 

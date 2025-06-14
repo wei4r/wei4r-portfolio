@@ -1,6 +1,6 @@
 import Link from "next/link";
 import React from "react";
-import { space_mono } from "../layout";
+import { space_mono } from "../fonts";
 
 const Footer = () => {
   return (

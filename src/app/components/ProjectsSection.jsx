@@ -41,24 +41,6 @@ const projectsData = [
     gitUrl: "https://github.com/wei4r/Spaceship-Game",
     previewUrl: "https://github.com/wei4r/Spaceship-Game",
   },
-  // {
-  //   id: 5,
-  //   title: "React Firebase Template",
-  //   description: "Authentication and CRUD operations",
-  //   image: "/images/projects/5.png",
-  //   tag: ["All", "Web"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
-  // {
-  //   id: 6,
-  //   title: "Full-stack Roadmap",
-  //   description: "Project 5 description",
-  //   image: "/images/projects/6.png",
-  //   tag: ["All", "Web"],
-  //   gitUrl: "/",
-  //   previewUrl: "/",
-  // },
 ];
 
 const ProjectsSection = () => {

@@ -2,7 +2,7 @@
 import React, { useTransition, useState } from "react";
 import Image from "next/image";
 import TabButton from "./TabButton";
-import { space_mono } from "../layout";
+import { space_mono } from "../fonts";
 
 const TAB_DATA = [
   {
