@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import NavLink from "./NavLink";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
-import { space_mono } from "../layout";
+import { space_mono } from "../fonts";
 
 const navLinks = [
   {
@@ -15,10 +15,6 @@ const navLinks = [
     title: "Projects",
     path: "#projects",
   },
-  // {
-  //   title: "Contact",
-  //   path: "#contact",
-  // },
 ];
 
 const Navbar = () => {

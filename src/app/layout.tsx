@@ -1,15 +1,15 @@
 import './globals.css'
-import { Inter, Space_Mono } from 'next/font/google'
+import { Inter } from 'next/font/google'
+import { Metadata } from 'next'
 
 const inter = Inter({ subsets: ['latin'] })
-export const space_mono = Space_Mono({ subsets: ['latin'], weight: '700' })
 
-// export const metadata = {
-//   title: 'wei4r',
-//   description: 'wei4r\'s personal website',
-// }
+export const metadata: Metadata = {
+  title: 'wei4r',
+  description: 'wei4r\'s personal website',
+}
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
