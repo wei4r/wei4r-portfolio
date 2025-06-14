@@ -1,14 +1,16 @@
 import Link from 'next/link';
 
 const SocialButton = ({ href, name, color, icon }) => {
-  const borderColor = `border-${color}`;
-  const hoverBorderColor = `hover:border-${color}`;
-  const hoverBgColor = `hover:bg-${color}`;
+  const colorClasses = {
+    'pink-600': 'border-pink-600 hover:border-pink-600 hover:bg-pink-600',
+    'blue-600': 'border-blue-600 hover:border-blue-600 hover:bg-blue-600',
+    // Add more colors as needed
+  };
 
   return (
     <Link
       href={href}
-      className={`group mt-2 inline-flex items-center justify-center h-12 w-12 hover:w-28 rounded-full border-2 ${borderColor} text-gray-300 ${hoverBorderColor} ${hoverBgColor} hover:text-white transition-all duration-300 overflow-hidden`}
+      className={`group mt-2 inline-flex items-center justify-center h-12 w-12 hover:w-28 rounded-full border-2 text-gray-300 hover:text-white transition-all duration-300 overflow-hidden ${colorClasses[color] || colorClasses['blue-600']}`}
       aria-label={`${name} Profile`}
     >
       <div className="flex items-center justify-center w-full transition-all duration-300">
