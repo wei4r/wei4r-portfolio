@@ -31,7 +31,7 @@ const AchievementsSection = () => {
               key={index}
               className="flex flex-col items-center justify-start mx-4 my-4 sm:my-0 h-full"
             >
-              <h2 className="text-white sm:text-4xl text-xl font-bold flex flex-row">
+              <h2 className="text-white sm:text-4xl text-xl font-bold flex flex-row items-center">
                 {achievement.prefix}
                 <AnimatedNumbers
                   includeComma
