@@ -15,6 +15,10 @@ const navLinks = [
     title: "Projects",
     path: "#projects",
   },
+  {
+    title: "QR Code",
+    path: "/qrcode",
+  },
 ];
 
 const Navbar = () => {
