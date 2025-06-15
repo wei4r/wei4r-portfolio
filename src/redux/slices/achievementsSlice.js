@@ -49,7 +49,11 @@ export const fetchCommitsThisWeek = createAsyncThunk(
   async () => {
     try {
       // get all repos
-      const reposResponse = await fetch("https://api.github.com/users/wei4r/repos");
+      const reposResponse = await fetch("https://api.github.com/users/wei4r/repos", {
+        headers: {
+          'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`
+        }
+      });
       if (!reposResponse.ok) {
         throw new Error('Network response was not ok');
       }
@@ -63,7 +67,9 @@ export const fetchCommitsThisWeek = createAsyncThunk(
       // get commits nubmer of each repo
       const commitsPromises = repos.map(async (repo) => {
         const commitsUrl = `https://api.github.com/repos/wei4r/${repo.name}/commits?since=${since}&per_page=1`;
-        const response = await fetch(commitsUrl, { method: 'HEAD' });
+        const response = await fetch(commitsUrl, { method: 'HEAD', headers: {
+          'Authorization': `Bearer ${process.env.GITHUB_TOKEN}`
+        } });
         const link = response.headers.get('Link');
         if (link) {
           const match = link.match(/page=(\d+)>; rel="last"/);
