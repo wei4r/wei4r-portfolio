@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 export default function ContactLink() {
-  const [label, setLabel] = useState('Contact');
-  const [copied, setCopied] = useState(false);
+  const [label, setLabel] = useState<string>('Contact');
+  const [copied, setCopied] = useState<boolean>(false);
 
-  const handleCopy = () => {
+  const handleCopy = (): void => {
     const email = 'hankwei02151@gmail.com';
     navigator.clipboard.writeText(email)
       .then(() => {

@@ -6,7 +6,12 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 import MenuOverlay from "./MenuOverlay";
 import { space_mono } from "../fonts";
 
-const navLinks = [
+interface NavItem {
+  title: string;
+  path: string;
+}
+
+const navLinks: NavItem[] = [
   {
     title: "About",
     path: "#about",
@@ -22,7 +27,7 @@ const navLinks = [
 ];
 
 const Navbar = () => {
-  const [navbarOpen, setNavbarOpen] = useState(false);
+  const [navbarOpen, setNavbarOpen] = useState<boolean>(false);
 
   return (
     <nav className={`fixed border-[#33353F] top-0 left-0 right-0 z-10 bg-[#121212] bg-opacity-100 margin:auto w-full ${space_mono.className}`}>

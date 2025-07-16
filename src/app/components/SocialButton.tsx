@@ -1,10 +1,17 @@
 import Link from 'next/link';
+import { ReactNode } from 'react';
 
-const SocialButton = ({ href, name, color, icon }) => {
+interface SocialButtonProps {
+  href: string;
+  name: string;
+  color: 'pink-600' | 'blue-600';
+  icon: ReactNode;
+}
+
+const SocialButton = ({ href, name, color, icon }: SocialButtonProps) => {
   const colorClasses = {
     'pink-600': 'border-pink-600 hover:border-pink-600 hover:bg-pink-600',
     'blue-600': 'border-blue-600 hover:border-blue-600 hover:bg-blue-600',
-    // Add more colors as needed
   };
 
   return (

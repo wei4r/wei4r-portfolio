@@ -3,8 +3,19 @@ import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
 import ProjectTag from "./ProjectTag";
 import { motion, useInView } from "framer-motion";
+import ErrorBoundary from "./ErrorBoundary";
 
-const projectsData = [
+interface Project {
+  id: number;
+  title: string;
+  description: string;
+  image: string;
+  tag: string[];
+  gitUrl: string;
+  previewUrl: string;
+}
+
+const projectsData: Project[] = [
   {
     id: 1,
     title: "CoverCraft AI",
@@ -53,11 +64,11 @@ const projectsData = [
 ];
 
 const ProjectsSection = () => {
-  const [tag, setTag] = useState("All");
-  const ref = useRef(null);
+  const [tag, setTag] = useState<string>("All");
+  const ref = useRef<HTMLUListElement>(null);
   const isInView = useInView(ref, { once: true });
 
-  const handleTagChange = (newTag) => {
+  const handleTagChange = (newTag: string): void => {
     setTag(newTag);
   };
 
@@ -71,48 +82,52 @@ const ProjectsSection = () => {
   };
 
   return (
-    <section id="projects" className="scroll-mt-16">
-      <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
-        My Projects
-      </h2>
-      <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
-        <ProjectTag
-          onClick={handleTagChange}
-          name="All"
-          isSelected={tag === "All"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="Web"
-          isSelected={tag === "Web"}
-        />
-        <ProjectTag
-          onClick={handleTagChange}
-          name="AI"
-          isSelected={tag === "AI"}
-        />
-      </div>
-      <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
-        {filteredProjects.map((project, index) => (
-          <motion.li
-            key={index}
-            variants={cardVariants}
-            initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            transition={{ duration: 0.3, delay: index * 0.4 }}
-          >
-            <ProjectCard
-              key={project.id}
-              title={project.title}
-              description={project.description}
-              imgUrl={project.image}
-              gitUrl={project.gitUrl}
-              previewUrl={project.previewUrl}
-            />
-          </motion.li>
-        ))}
-      </ul>
-    </section>
+    <ErrorBoundary>
+      <section id="projects" className="scroll-mt-16">
+        <h2 className="text-center text-4xl font-bold text-white mt-4 mb-8 md:mb-12">
+          My Projects
+        </h2>
+        <div className="text-white flex flex-row justify-center items-center gap-2 py-6">
+          <ProjectTag
+            onClick={handleTagChange}
+            name="All"
+            isSelected={tag === "All"}
+          />
+          <ProjectTag
+            onClick={handleTagChange}
+            name="Web"
+            isSelected={tag === "Web"}
+          />
+          <ProjectTag
+            onClick={handleTagChange}
+            name="AI"
+            isSelected={tag === "AI"}
+          />
+        </div>
+        <ul ref={ref} className="grid md:grid-cols-3 gap-8 md:gap-12">
+          {filteredProjects.map((project, index) => (
+            <motion.li
+              key={index}
+              variants={cardVariants}
+              initial="initial"
+              animate={isInView ? "animate" : "initial"}
+              transition={{ duration: 0.3, delay: index * 0.4 }}
+            >
+              <ErrorBoundary>
+                <ProjectCard
+                  key={project.id}
+                  title={project.title}
+                  description={project.description}
+                  imgUrl={project.image}
+                  gitUrl={project.gitUrl}
+                  previewUrl={project.previewUrl}
+                />
+              </ErrorBoundary>
+            </motion.li>
+          ))}
+        </ul>
+      </section>
+    </ErrorBoundary>
   );
 };
 

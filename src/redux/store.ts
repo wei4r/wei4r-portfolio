@@ -7,3 +7,6 @@ export const store = configureStore({
     achievements: achievementsReducer,
   },
 });
+
+export type RootState = ReturnType<typeof store.getState>;
+export type AppDispatch = typeof store.dispatch;

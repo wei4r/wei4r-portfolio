@@ -8,7 +8,7 @@ import ContactLink from "./ContactLink";
 import SocialButton from "./SocialButton";
 
 const HeroSection = () => {
-  const [windowWidth, setWindowWidth] = useState(0);
+  const [windowWidth, setWindowWidth] = useState<number>(0);
 
   useEffect(() => {
     const handleResize = () => setWindowWidth(window.innerWidth);
